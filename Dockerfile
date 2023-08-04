@@ -19,6 +19,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+USER root
+
 RUN apt-get update && apt-get install -y zip curl
 RUN mkdir /otel
 RUN curl -L -o /otel/otel-dotnet-install.sh https://github.com/open-telemetry/opentelemetry-dotnet-instrumentation/releases/download/v0.7.0/otel-dotnet-auto-install.sh
