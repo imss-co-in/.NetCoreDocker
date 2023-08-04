@@ -35,7 +35,7 @@ RUN /bin/bash /otel/otel-dotnet-install.sh
 
 RUN chmod +x /otel/instrument.sh
 
-EXPOSE 80
+
 
 
 #ENTRYPOINT ["dotnet", "DockeroDummy.dll"]
